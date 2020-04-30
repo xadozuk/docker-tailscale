@@ -14,4 +14,6 @@ ENV ARCH=amd64
 ADD https://pkgs.tailscale.com/stable/tailscale_${VERSION}_${ARCH}.tgz /tailscale.tgz
 RUN mkdir /tailscale && tar xzf /tailscale.tgz -C /tailscale --strip-components 1
 
+VOLUME /var/lib/tailscale
+
 CMD ["/tailscale/tailscaled"]
