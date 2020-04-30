@@ -4,7 +4,7 @@ MAINTAINER Xadozuk <xadozuk@gmail.com>
 
 RUN apt-get update && \
     apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-    apt-get install -y iptables iproute2 && \
+    apt-get install -y iptables iproute2 ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
